@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout | NOVA</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">
+
+<a href="index.html" style="color:inherit;text-decoration:none;">
+
+NOVA
+
+</a>
+
+</div>
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+
+<a href="index.html#products">Shop</a>
+
+<a href="cart.html">Cart</a>
+
+</nav>
+
+<div class="nav-icons">
+
+<a href="cart.html" class="cart-link">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cart-count">0</span>
+
+</a>
+
+<a href="login.html">
+
+<i class="fa-regular fa-user"></i>
+
+</a>
+
+</div>
+
+</header>
+
+<section class="checkout">
+
+<h2 class="section-title">Checkout</h2>
+
+<form id="checkout-form">
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+<input
+type="tel"
+placeholder="Phone Number"
+required>
+
+<textarea
+placeholder="Delivery Address"
+required></textarea>
+
+<select required>
+
+<option value="">Select Payment Method</option>
+
+<option>Cash on Delivery</option>
+
+<option>Debit Card</option>
+
+<option>Credit Card</option>
+
+</select>
+
+<button type="submit">
+
+Place Order
+
+</button>
+
+</form>
+
+</section>
+
+<script src="js/script.js"></script>
+
+<script src="js/checkout.js"></script>
+
+</body>
+
+</html>

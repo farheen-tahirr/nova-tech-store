@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Laptops | NOVA</title>
@@ -12,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -20,64 +19,84 @@
 
 <header class="header">
 
-<div class="logo">
+    <div class="logo">
+        <a href="index.html" style="color:inherit;text-decoration:none;">
+            NOVA
+        </a>
+    </div>
 
-<a href="index.html" style="color:inherit;text-decoration:none;">
-NOVA
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Shop</a>
+        <a href="index.html#categories">Categories</a>
+<a href="cart.html" class="cart-link">
+
+    <i class="fa-solid fa-cart-shopping"></i>
+
+    <span id="cart-count">0</span>
+
 </a>
-
-</div>
-
-<nav class="navbar">
-
-<a href="index.html">Home</a>
-
-<a href="index.html#products">Shop</a>
-
-<a href="index.html#categories">Categories</a>
-
-<a href="cart.html">
-<i class="fa-solid fa-cart-shopping"></i>
-</a>
-
-</nav>
+    </nav>
 
 </header>
 
 <section class="products">
 
-<h2 class="section-title">
+    <h2 class="section-title">Laptops</h2>
 
-Laptops
+    <div class="product-grid">
 
-</h2>
+        <!-- MacBook -->
 
-<div class="product-grid">
+        <div class="product-card">
 
-<div class="product-card">
+            <img src="https://placehold.co/300x220/1E293B/FFFFFF?text=MacBook"
+                 alt="MacBook">
 
-<img src="https://placehold.co/300x220/1E293B/FFFFFF?text=MacBook"
-alt="MacBook">
+            <h3>MacBook Air M4</h3>
 
-<h3>MacBook Air M4</h3>
+            <p class="price">Rs. 289,999</p>
 
-<p class="price">Rs. 289,999</p>
+            <a href="product-macbook.html">
+                <button>View Details</button>
+            </a>
 
-<a href="product-macbook.html">
+        </div>
 
-<button>
+        <!-- Dell -->
 
-View Details
+        <div class="product-card">
 
-</button>
+            <img src="https://placehold.co/300x220/1E293B/FFFFFF?text=Dell+XPS"
+                 alt="Dell XPS">
 
-</a>
+            <h3>Dell XPS 15</h3>
 
-</div>
+            <p class="price">Rs. 499,999</p>
 
-</div>
+            <button>Coming Soon</button>
+
+        </div>
+
+        <!-- ASUS -->
+
+        <div class="product-card">
+
+            <img src="https://placehold.co/300x220/1E293B/FFFFFF?text=ASUS+Zenbook"
+                 alt="ASUS Zenbook">
+
+            <h3>ASUS Zenbook 14</h3>
+
+            <p class="price">Rs. 319,999</p>
+
+            <button>Coming Soon</button>
+
+        </div>
+
+    </div>
 
 </section>
+<script src="js/script.js"></script>
 
 </body>
 
