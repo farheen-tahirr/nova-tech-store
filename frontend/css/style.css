@@ -1,0 +1,205 @@
+/* ===========================
+   GOOGLE FONT & RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#7C3AED;
+    --primary-hover:#6D28D9;
+    --dark:#0F172A;
+    --card:#1E293B;
+    --white:#FFFFFF;
+    --gray:#CBD5E1;
+    --border:#334155;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--dark);
+    color:var(--white);
+
+}
+
+/* ===========================
+        HEADER
+=========================== */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(15,23,42,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid var(--border);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+/* Logo */
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+}
+
+/* Navigation */
+
+.navbar{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.navbar a{
+
+    color:var(--white);
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:var(--primary);
+
+}
+
+/* Icons */
+
+.nav-icons{
+
+    display:flex;
+
+    gap:22px;
+
+    font-size:20px;
+
+}
+
+.nav-icons i{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.nav-icons i:hover{
+
+    color:var(--primary);
+
+    transform:scale(1.2);
+
+}
+
+/* ===========================
+          HERO
+=========================== */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 8%;
+
+}
+
+.hero-content{
+
+    max-width:650px;
+
+}
+
+.hero-content span{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.hero-content h1{
+
+    font-size:70px;
+
+    line-height:1.1;
+
+    margin:20px 0;
+
+}
+
+.hero-content p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.hero-content button{
+
+    padding:16px 35px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.hero-content button:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+}
