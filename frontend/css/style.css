@@ -824,3 +824,10 @@ body{
     background:var(--primary-hover);
 
 }
+.category-link{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
