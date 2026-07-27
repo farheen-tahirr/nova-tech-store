@@ -147,3 +147,56 @@ buttons.forEach(button => {
 
 // Load cart count when page opens
 updateCartCount();
+// ==========================
+// USER LOGIN STATUS + LOGOUT
+// ==========================
+
+const userLink = document.getElementById("user-link");
+
+const loggedInUser = JSON.parse(
+    localStorage.getItem("loggedInUser")
+);
+
+
+if(userLink && loggedInUser){
+
+
+    userLink.innerHTML = `
+
+        <i class="fa-solid fa-user"></i>
+
+        ${loggedInUser.name} ▼
+
+    `;
+
+
+    userLink.href = "#";
+
+
+    userLink.onclick = function(e){
+
+        e.preventDefault();
+
+
+        const confirmLogout = confirm(
+            "Do you want to logout?"
+        );
+
+
+        if(confirmLogout){
+
+
+            localStorage.removeItem(
+                "loggedInUser"
+            );
+
+
+            window.location.href = "index.html";
+
+
+        }
+
+    };
+
+
+}
