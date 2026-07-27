@@ -203,3 +203,199 @@ body{
     transform:translateY(-3px);
 
 }
+/* ===========================
+        SECTION TITLE
+=========================== */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:50px;
+
+}
+
+/* ===========================
+        CATEGORIES
+=========================== */
+
+.categories{
+
+    padding:80px 8%;
+
+}
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.category-card{
+
+    background:var(--card);
+
+    padding:40px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    border:1px solid var(--border);
+
+}
+
+.category-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 10px 30px rgba(124,92,246,.25);
+
+}
+
+.category-card i{
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.category-card h3{
+
+    font-size:22px;
+
+}
+/* ===========================
+        PRODUCTS
+=========================== */
+
+.products{
+
+    padding:80px 8%;
+
+}
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.product-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 40px rgba(124,92,246,.25);
+
+}
+
+.product-card img{
+
+    width:100%;
+
+    border-radius:15px;
+
+}
+
+.badge{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+.product-card h3{
+
+    margin:20px 0 10px;
+
+}
+
+.price{
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+.rating{
+
+    color:gold;
+
+    margin:15px 0;
+
+}
+
+.product-card button{
+
+    width:100%;
+
+    padding:14px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.product-card button:hover{
+
+    background:var(--primary-hover);
+
+}
