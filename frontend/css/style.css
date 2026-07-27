@@ -1,4 +1,8 @@
-/* ===========================
+html{
+
+    scroll-behavior:smooth;
+
+}/* ===========================
    GOOGLE FONT & RESET
 =========================== */
 
@@ -545,5 +549,278 @@ body{
     color:var(--primary);
 
     text-decoration:none;
+
+}
+/* ===========================
+   SEARCH BAR
+=========================== */
+
+.search-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:50px 0;
+
+}
+
+#searchInput{
+
+    width:500px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    outline:none;
+
+}  /* ===========================
+        NAVBAR SEARCH
+=========================== */
+
+.search-box{
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 6px 12px;
+    border-radius: 30px;
+    width: 220px;
+    height: 38px;
+}
+
+.search-box i{
+    color: #666;
+    margin-right: 8px;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    background:white;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    width:260px;
+
+    height:40px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:0 15px;
+
+    font-size:15px;
+
+}
+
+.search-box button{
+
+    width:45px;
+
+    height:40px;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.search-box button:hover{
+
+    background:var(--primary-hover);
+
+}  
+/* ===========================
+      SEARCH CONTAINER
+=========================== */
+
+.search-container{
+    position: relative;
+    width: 260px;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 40px;
+}
+
+.search-box input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 15px;
+}
+
+.search-box button{
+    width: 45px;
+    height: 40px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+}
+
+#suggestions{
+
+    position:absolute;
+
+    top:48px;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+    overflow:hidden;
+
+    z-index:999;
+
+}
+
+.suggestion{
+
+    padding:12px 15px;
+
+    cursor:pointer;
+
+    color:black;
+
+    transition:.2s;
+
+}
+
+.suggestion:hover{
+
+    background:#f5f5f5;
+
+}  /* ===========================
+   PRODUCT DETAILS
+=========================== */
+
+.product-details{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:80px 8%;
+
+}
+
+.product-image img{
+
+    width:400px;
+
+    border-radius:20px;
+
+}
+
+.product-info{
+
+    max-width:500px;
+
+}
+
+.product-info h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.product-info .price{
+
+    color:var(--primary);
+
+    font-size:30px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+.product-info .rating{
+
+    color:gold;
+
+    margin-bottom:20px;
+
+}
+
+.product-info p{
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.product-info .cart-btn{
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.product-info .cart-btn:hover{
+
+    background:var(--primary-hover);
 
 }

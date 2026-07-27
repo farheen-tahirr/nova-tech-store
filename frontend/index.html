@@ -47,22 +47,38 @@
 
         <nav class="navbar">
 
-            <a href="#">Home</a>
+           <a href="#home">Home</a>
 
-            <a href="#">Shop</a>
+           <a href="#products">Shop</a>
 
-            <a href="#">Categories</a>
+            <a href="#categories">Categories</a>
 
-            <a href="#">Deals</a>
+            <a href="#deals">Deals</a>
 
-            <a href="#">Contact</a>
+            <a href="#footer">Contact</a>
 
         </nav>
 
         <div class="nav-icons">
 
-            <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="search-container">
 
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products...">
+
+        <button id="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+    </div>
+
+    <div id="suggestions"></div>
+
+</div>
             <i class="fa-regular fa-heart"></i>
 
            <a href="cart.html">
@@ -81,7 +97,7 @@
 
     <!-- ================= HERO ================= -->
 
-    <main>
+    <main id="home">
 
         <section class="hero">
 
@@ -99,18 +115,22 @@
 
                 </p>
 
-                <button>
+              <a href="#products">
 
-                    Shop Collection
+    <button>
 
-                </button>
+        Shop Collection
+
+    </button>
+
+</a>
 
             </div>
 
         </section>
         <!-- ================= CATEGORIES ================= -->
 
-<section class="categories">
+<section class="categories" id="categories">
 
     <h2 class="section-title">Browse Categories</h2>
 
@@ -151,7 +171,7 @@
 </section>
 <!-- ================= PRODUCTS ================= -->
 
-<section class="products">
+<section class="products" id="products"></section>
 
     <h2 class="section-title">Trending Products</h2>
 
