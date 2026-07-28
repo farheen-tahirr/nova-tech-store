@@ -94,15 +94,11 @@ function displayCart() {
 
         </a>
 
-       <a href="checkout.html">
+       <button class="checkout-btn" id="checkout-btn">
 
-<button class="checkout-btn">
-
-Proceed to Checkout
+    Proceed to Checkout
 
 </button>
-
-</a>
 
     </div>
 
@@ -154,3 +150,30 @@ function decreaseQuantity(index){
     displayCart();
 
 }
+// ==========================
+// CHECKOUT LOGIN PROTECTION
+// ==========================
+
+document.addEventListener("click", function (e) {
+
+    if (e.target.id === "checkout-btn") {
+
+        const loggedInUser = JSON.parse(
+            localStorage.getItem("loggedInUser")
+        );
+
+        if (loggedInUser) {
+
+            window.location.href = "checkout.html";
+
+        } else {
+
+            alert("Please login before checkout!");
+
+            window.location.href = "login.html";
+
+        }
+
+    }
+
+});

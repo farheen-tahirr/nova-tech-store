@@ -49,9 +49,9 @@ NOVA
 
 </a>
 
-<a href="login.html">
+<a href="login.html" id="user-link" style="color:white;text-decoration:none;">
 
-<i class="fa-regular fa-user"></i>
+    <i class="fa-regular fa-user"></i>
 
 </a>
 
@@ -67,24 +67,28 @@ NOVA
 
 <input
 type="text"
+id="fullName"
 placeholder="Full Name"
 required>
 
 <input
 type="email"
+id="email"
 placeholder="Email Address"
 required>
 
 <input
 type="tel"
+id="phone"
 placeholder="Phone Number"
 required>
 
 <textarea
+id="address"
 placeholder="Delivery Address"
 required></textarea>
 
-<select required>
+<select id="paymentMethod" required>
 
 <option value="">Select Payment Method</option>
 

@@ -200,3 +200,32 @@ if(userLink && loggedInUser){
 
 
 }
+// ==========================
+// CHECKOUT LOGIN PROTECTION
+// ==========================
+
+const checkoutBtn = document.getElementById("checkout-btn");
+
+if (checkoutBtn) {
+
+    checkoutBtn.addEventListener("click", function () {
+
+        const loggedInUser = JSON.parse(
+            localStorage.getItem("loggedInUser")
+        );
+
+        if (loggedInUser) {
+
+            window.location.href = "checkout.html";
+
+        } else {
+
+            alert("Please login before checkout!");
+
+            window.location.href = "login.html";
+
+        }
+
+    });
+
+}
