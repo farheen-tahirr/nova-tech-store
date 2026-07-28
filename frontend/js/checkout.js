@@ -28,6 +28,33 @@ if (currentUser) {
     email.value = currentUser.email;
 
 }
+// ==========================
+// ORDER SUMMARY
+// ==========================
+
+const orderItems = document.getElementById("order-items");
+const orderTotal = document.getElementById("order-total");
+
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let total = 0;
+
+cart.forEach(item => {
+
+    const price = Number(item.price.replace(/[^\d]/g, ""));
+
+    total += price * item.quantity;
+
+    orderItems.innerHTML += `
+        <p>
+            ${item.name}<br>
+            Qty: ${item.quantity} × ${item.price}
+        </p>
+        <hr>
+    `;
+});
+
+orderTotal.innerHTML = `Total: Rs. ${total.toLocaleString()}`;
 
 // Handle form submission
 form.addEventListener("submit", function (e) {
