@@ -1,6 +1,8 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require("cors");
+
 const connectDB = require("./config/db");
 
 // Import Routes
@@ -9,22 +11,35 @@ const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 
+// ===============================
 // Middleware
+// ===============================
+app.use(cors());
 app.use(express.json());
 
+// ===============================
 // Connect Database
+// ===============================
 connectDB();
 
+// ===============================
 // Routes
+// ===============================
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 
+// ===============================
 // Home Route
+// ===============================
 app.get("/", (req, res) => {
-  res.send("E-commerce API is running...");
+  res.send("🚀 NOVA Tech Store API is running...");
 });
 
+// ===============================
 // Start Server
-app.listen(process.env.PORT, () => {
-  console.log(`✅ Server is running on port ${process.env.PORT}`);
+// ===============================
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
 });
