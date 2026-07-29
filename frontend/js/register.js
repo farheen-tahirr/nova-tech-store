@@ -1,51 +1,41 @@
 const form = document.getElementById("register-form");
 
-form.addEventListener("submit", function(e){
-
+form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-
-    const email = document.getElementById("email").value;
-
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
-
     const confirmPassword = document.getElementById("confirmPassword").value;
 
-    if(password !== confirmPassword){
-
+    if (password !== confirmPassword) {
         alert("Passwords do not match!");
-
         return;
-
     }
 
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+    try {
+        const response = await fetch("http://localhost:3000/api/auth/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                password,
+            }),
+        });
 
-    const userExists = users.find(user => user.email === email);
+        const data = await response.json();
 
-    if(userExists){
-
-        alert("Email already registered!");
-
-        return;
-
+        if (response.ok) {
+            alert("Registration Successful!");
+            window.location.href = "login.html";
+        } else {
+            alert(data.message || "Registration Failed!");
+        }
+    } catch (error) {
+        console.error(error);
+        alert("Cannot connect to server.");
     }
-
-    users.push({
-
-        name,
-
-        email,
-
-        password
-
-    });
-
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Registration Successful!");
-
-    window.location.href = "login.html";
-
 });

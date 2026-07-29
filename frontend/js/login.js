@@ -4,80 +4,56 @@
 
 const form = document.getElementById("login-form");
 
-form.addEventListener("submit", function(e){
-
+form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-
-    // Get input values
     const email = document.getElementById("email").value.trim().toLowerCase();
-
     const password = document.getElementById("password").value.trim();
 
-
-    // Check empty fields
-    if(email === "" || password === ""){
-
+    if (email === "" || password === "") {
         alert("Please fill all fields!");
-
         return;
-
     }
 
+    try {
+        const response = await fetch("http://localhost:3000/api/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                email,
+                password,
+            }),
+        });
 
-    // Get registered users
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+        const data = await response.json();
 
+        if (response.ok) {
 
-    // Find matching user
-    const user = users.find(function(u){
+            // Save JWT token
+            localStorage.setItem("token", data.token);
 
-        return (
-            u.email.toLowerCase() === email &&
-            u.password === password
-        );
+            // Save logged in user
+            localStorage.setItem(
+    "loggedInUser",
+    JSON.stringify(data.user)
+);
 
-    });
+            alert("Login Successful!");
 
+            window.location.href = "index.html";
 
+        } else {
 
-    // Login successful
-    if(user){
+            alert(data.message);
 
+        }
 
-        // Save only required session data
-        const loggedInUser = {
+    } catch (error) {
 
-            name: user.name,
-
-            email: user.email
-
-        };
-
-
-        localStorage.setItem(
-            "loggedInUser",
-            JSON.stringify(loggedInUser)
-        );
-
-
-        alert("Login Successful!");
-
-
-        // Redirect to homepage
-        window.location.href = "index.html";
-
+        console.error(error);
+        alert("Cannot connect to server.");
 
     }
-
-
-
-    // Login failed
-    else{
-
-        alert("Invalid Email or Password!");
-
-    }
-
-
 });
